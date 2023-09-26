@@ -1,6 +1,9 @@
 package com.shaiful.hiltinpractice.ui.todo.widgets
 
+import android.provider.CalendarContract.Colors
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,6 +27,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -80,7 +84,7 @@ fun TodoListScreen(
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp)
+                    .height(56.dp),
             )
         },
         floatingActionButton = {
@@ -96,10 +100,16 @@ fun TodoListScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(16.dp)
                     .padding(it),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Box(
+                    modifier = Modifier.fillMaxWidth()
+                        .height(.6.dp)
+                        .background(
+                            color = Color.Gray
+                        )
+                )
                 LazyColumn {
                     items(todoList.value) { todo ->
                         TodoItemWidget(
