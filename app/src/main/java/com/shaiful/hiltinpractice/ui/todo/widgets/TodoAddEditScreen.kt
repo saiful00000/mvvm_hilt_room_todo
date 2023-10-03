@@ -65,14 +65,9 @@ fun TodoAddEditScreen(
                 title = {
                     Text(
                         text = "Add Todo",
-                        fontSize = 20.sp,
-                        modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center
                     )
                 },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(56.dp)
             )
         },
         floatingActionButton = {

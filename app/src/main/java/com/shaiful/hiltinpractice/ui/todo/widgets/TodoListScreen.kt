@@ -77,14 +77,9 @@ fun TodoListScreen(
                 title = {
                     Text(
                         text = "Todo App",
-                        fontSize = 20.sp,
                         modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center
                     )
                 },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(56.dp),
             )
         },
         floatingActionButton = {
